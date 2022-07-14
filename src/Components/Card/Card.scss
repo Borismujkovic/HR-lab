@@ -1,0 +1,28 @@
+#Card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 300px;
+        height: 400px;
+        background-image: url(https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGdyZXklMjAlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid ;
+        padding: 30px 0;
+        > img{
+            height: 200px;
+            border-radius: 100%;
+        }
+        h2{
+            border-top: 2px solid;
+            padding-top: 20px;
+        }
+    }
+}
