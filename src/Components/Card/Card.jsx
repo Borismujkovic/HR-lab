@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import './Card.scss'
+import { adminCtx } from '../../context';
 
 export const Card = (props) => {
-
+    const candidateInfo = useContext(adminCtx).candidateInfo
+    
 
     return <div id='Card'>
-        <div>
-
-        <img src="https://www.therconline.com/wp-content/uploads/2022/05/Does-Facebook-have-the-%E2%80%98New-Profile-Pic-feature-as-app-goes-viral-1.png" alt="" />
-        <h2>Boris Mujkovic</h2>
+        <Link to="/Info" className="info-link">
+        <div className='card-wrap' onClick={() => candidateInfo(props.singleCandidate)}>
+        <img  src={props.singleCandidate.images} alt="" />
+        <h2>{props.singleCandidate.name}</h2>
         </div>
+        </Link>
     </div>
 }

@@ -13,7 +13,7 @@ export const Login = (props) => {
           />
         </div>
         <div className="form">
-          <h1>Login</h1>
+          
           <label>UserName:</label>
           <input type="text" name="username" />
           <label>Password:</label>
@@ -27,7 +27,7 @@ export const Login = (props) => {
             <option value="Facebook">Facebook</option>
           </select>
           <Link to='/SinglePage'><button>LogIn</button></Link>
-        </div>
+          </div>
         <div className="companies">
           <a href="https://www.google.com/" target="/blank">
             <img
@@ -60,6 +60,7 @@ export const Login = (props) => {
             />
           </a>
         </div>
+        
       </main>
     </>
   );

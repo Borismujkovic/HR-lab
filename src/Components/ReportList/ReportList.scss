@@ -1,0 +1,64 @@
+$logo-color: rgb(245, 130, 31);
+
+#ReportList{
+    display: flex;
+    border: 3px solid black;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 10px 0;
+    > h2{
+        border-right: 2px solid;
+        width: 30%;
+    }
+    > p{
+        border-right: 1px solid;
+        width: 30%;
+    }
+    > .buttons{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        
+        .details{
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 2px solid $logo-color;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            &:hover{
+                background-color: $logo-color;
+                color: white;
+            }
+        }
+        .edit{
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 2px solid $logo-color;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            &:hover{
+                background-color: $logo-color;
+                color: white;
+            }
+        }
+        .delete{
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 2px solid red;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            &:hover{
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+}

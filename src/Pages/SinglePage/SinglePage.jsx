@@ -1,26 +1,39 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { useState} from "react";
 import './SinglePage.scss'
 import { Header } from '../../Components/Header/Header'
 import { Card } from '../../Components/Card/Card'
 import {Footer} from '../../Components/Footer/Footer'
+import { Link } from "react-router-dom";
+import { adminCtx } from "../../context";
 
-export const SinglePage = () => {
+export const SinglePage = (props) => {
+  const candidates = useContext(adminCtx).candidates
+  const [filtered, setFiltered] = useState('')
 
+  const filteredCandidates = candidates.filter(c => 
+    c.name.toLowerCase().includes(filtered.toLowerCase())
+  )
 
+  const search = (event) => {
+    setFiltered(event.target.value)
+  }
+  
 
   return <div id="SinglePage">
-    <Header />
+    <Header toggleTheme={props.toggleTheme}/>
     <main className="main-card">
     <div className='div-search'>
-            <button>Your Reports</button>
+            <Link to="/Admin"><button>Your Reports</button></Link>
             <div>
-            <img className='search-icon' src="https://cdn-icons.flaticon.com/png/128/2120/premium/2120967.png?token=exp=1657822380~hmac=b132a890d5b679e467095b78fb2a19f1" alt="" />
-            <input type="search" />
+            <img className='search-icon' src="https://freesvg.org/storage/img/thumb/search_ideogram.png" alt="" />
+            <input type="search" onChange={search}/>
             </div>
         </div>
-    <Card />
+        <div className="cards">
+
+        {filteredCandidates.map(e => <Card singleCandidate={e} />)}
+        </div>
     </main>
     <Footer />
   </div>

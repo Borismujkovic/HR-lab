@@ -5,23 +5,31 @@
     width: 100%;
     min-height: 100vh;
 display: flex;
-justify-content: space-around;
+flex-direction: column;
 align-items: center;
-flex-wrap: wrap;
-padding: 0 200px;
+justify-content: flex-start;
+padding: 40px 200px;
+padding-bottom: 50px;
+ .logo-image{
+    > img{
+        height: 400px;
+    }
+ }
     .form{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         width: 30%;
         padding: 0 50px;
+        
         h1{
             text-align: center;
         }
         label{
             margin: 10px;
             text-align: center;
+            font-weight: 700;
         }
         input{
             padding: 10px 20px;
@@ -53,6 +61,7 @@ padding: 0 200px;
         width: 80%;
         display: flex;
         justify-content: space-around;
+        padding: 100px 0;
         img{
             height: 50px;
             

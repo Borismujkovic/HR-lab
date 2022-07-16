@@ -1,0 +1,48 @@
+#Details{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+   
+    .candidateInfo{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 100px;
+        
+        color: black;
+       .candidateDetails{
+        width: 27%;
+        
+        >h2{
+            border-bottom: 1px solid white;
+        }
+        span{
+            color: rgb(255, 122, 0);
+        }
+        
+    
+    }
+    .detailsImg{
+            height: 300px;
+            margin-right: 200px;
+    }
+        > img{
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+        }
+        > div{
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                margin-bottom: 10px;
+            }
+            h3{
+                margin: 10px 0;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+}

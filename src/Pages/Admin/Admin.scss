@@ -1,0 +1,63 @@
+$logo-color: rgb(245, 130, 31);
+
+#Admin{
+  min-height: 100vh;
+    .admin-search {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 100px;
+    .admin-btn {
+      padding: 10px 40px;
+      background-color: $logo-color;
+      border: 2px solid $logo-color;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      &:active {
+        background-color: transparent;
+        color: $logo-color;
+      }
+      
+    }
+    .new-btn{
+        padding: 10px 40px;
+      background-color: white;
+      border: 2px solid $logo-color;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      color: $logo-color;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      &:active {
+        background-color: $logo-color;
+        color: white;
+      }
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      img {
+        height: 30px;
+        margin-right: 10px;
+      }
+      input {
+        padding: 10px 20px;
+        border-radius: 20px;
+        outline: none;
+        border: 2px solid $logo-color;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px auto;
+  }
+    }

@@ -1,0 +1,77 @@
+$logo-color: rgb(245, 130, 31);
+
+#NewReport{
+min-height: 100vh;
+
+
+
+    .admin-search {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 100px;
+    .new-btn {
+      padding: 10px 40px;
+      background-color: $logo-color;
+      border: 2px solid $logo-color;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      &:active {
+        background-color: transparent;
+        color: $logo-color;
+      }
+      
+    }
+    .admin-btn{
+        padding: 10px 40px;
+      background-color: white;
+      border: 2px solid $logo-color;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      color: $logo-color;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      &:active {
+        background-color: $logo-color;
+        color: white;
+      }
+    }
+  }
+  main{
+    display: flex;
+    > .candidates{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      .choose{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .number{
+          border: 4px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $logo-color;
+          width: 50px;
+          height: 50px;
+          font-size: 30px;
+          font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          border-radius: 50%;
+          margin-right: 20px; 
+          box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      }
+      >h2 {
+          color: black;
+      }
+    
+  }
+}
+}
