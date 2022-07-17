@@ -8,7 +8,6 @@ import { Admin } from "./Pages/Admin/Admin";
 import { Info } from "./Pages/Info/Info";
 import { NewReport } from "./Pages/NewReport/NewReport";
 import { AdminProvider } from "./context";
-import { Modal } from "./Components/Modal/Modal";
 
 // const candidates = useContext(adminCtx).candidates
 
@@ -74,7 +73,7 @@ export const App = () => {
           <Route path="/Admin">
             <Admin />
           </Route>
-          <Route path="/Info">
+          <Route path={`/Info`}>
             <Info />
           </Route>
           <Route path="/NewReport">
