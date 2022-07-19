@@ -1,6 +1,6 @@
 $logo-color: rgb(245, 130, 31);
 
-#ChooseCandidate {
+#ChooseCandidate-light {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@ $logo-color: rgb(245, 130, 31);
     justify-content: center;
     align-items: center;
     > .not-active {
-      border: 4px solid black;
+      // border: 4px solid black;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,6 +37,7 @@ $logo-color: rgb(245, 130, 31);
       .not-active {
         margin: 15px;
         border: 3px solid;
+        // border: 3px solid white;
         padding: 10px 20px;
         color: black;
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -53,6 +54,66 @@ $logo-color: rgb(245, 130, 31);
         border: 3px solid;
         padding: 10px 20px;
         color: black;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+        width: 250px;
+      }
+    }
+  }
+}
+
+#ChooseCandidate-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+
+  > .candidates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > .not-active {
+      // border: 4px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $logo-color;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      border-radius: 50%;
+      margin-right: 20px;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    > h2 {
+      color: black;
+    }
+  }
+  > main {
+    > div {
+      .not-active {
+        margin: 15px;
+        border: 3px solid white;
+        padding: 10px 20px;
+        color: white;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+        width: 250px;
+        &:hover {
+          background-color: rgba(245, 131, 31, 0.788);
+          border: 3px solid white;
+        }
+      }
+      .active {
+        background-color: rgba(245, 131, 31, 0.788);
+        margin: 15px;
+        border: 3px solid white;
+        padding: 10px 20px;
+        color: white;
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
         cursor: pointer;
         width: 250px;

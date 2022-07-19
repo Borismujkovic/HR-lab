@@ -4,9 +4,10 @@ import { adminCtx } from '../../context';
 
 
 export const Details = (props) => {
-    const singleCandidate = useContext(adminCtx).singleCandidate
+    const {singleCandidate} = useContext(adminCtx)
+    const {theme} = useContext(adminCtx)
 
-    return <div id='Details'>
+    return <div id={theme ? 'Details-light' : 'Details-dark'}>
     <div className='candidateInfo'>
                 <div className='candidateDetails'>
                 <h2><span>Full Name:</span> {singleCandidate.name}</h2>

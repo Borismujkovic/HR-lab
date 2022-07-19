@@ -6,12 +6,13 @@ import { adminCtx } from '../../context';
 
 
 export const ReportListInfo = (props) => {
-    const toggleModal = useContext(adminCtx).toggleModal
-    const selectReport = useContext(adminCtx).selectReport
+    const {toggleModal} = useContext(adminCtx)
+    const {selectReport} = useContext(adminCtx)
+    const {theme} = useContext(adminCtx)
+ 
 
 
-
-    return <div id='ReportListInfo'>
+    return <div id={theme ? 'ReportListInfo-light' : 'ReportListInfo-dark'}>
             <h3>{props.singleReport.companyName}</h3>
             <h3>{props.singleReport.interviewDate}</h3>
             <h3>{props.singleReport.status}</h3>

@@ -4,10 +4,11 @@ import './Card.scss'
 import { adminCtx } from '../../context';
 
 export const Card = (props) => {
-    const candidateInfo = useContext(adminCtx).candidateInfo
+    const {candidateInfo} = useContext(adminCtx)
+    const {theme} = useContext(adminCtx)
     
 
-    return <div id='Card'>
+    return <div id={theme ? 'Card-light' : "Card-dark"}>
         <Link to={`/Info/${props.singleCandidate.id}`} className="info-link">
         <div className='card-wrap' onClick={() => candidateInfo(props.singleCandidate)}>
         <img  src={props.singleCandidate.images} alt="" />

@@ -1,6 +1,7 @@
 #SinglePage {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   .main-card {
     flex-grow: 1;
     $logo-color: rgb(245, 130, 31);

@@ -1,6 +1,6 @@
 $logo-color: rgb(245, 130, 31);
 
-#ReportList{
+#ReportList-light{
     display: flex;
     border: 3px solid black;
     width: 60%;
@@ -8,6 +8,8 @@ $logo-color: rgb(245, 130, 31);
     align-items: center;
     padding: 10px 15px;
     margin: 10px 0;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
     > h2{
         border-right: 2px solid;
         width: 30%;
@@ -55,6 +57,75 @@ $logo-color: rgb(245, 130, 31);
             font-weight: 700;
             font-size: 17px;
             cursor: pointer;
+            &:hover{
+                background-color: red;
+                color: white;
+            }
+        }
+    }
+}
+
+
+#ReportList-dark{
+    display: flex;
+    border: 3px solid white;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 10px 0;
+    color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    > h2{
+        border-right: 2px solid;
+        width: 30%;
+    }
+    > p{
+        border-right: 1px solid;
+        width: 30%;
+    }
+    > .buttons{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        .details{
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 2px solid $logo-color;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 17px;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                background-color: $logo-color;
+                color: white;
+            }
+        }
+        .edit{
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 2px solid $logo-color;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            color: white;
+            &:hover{
+                background-color: $logo-color;
+                color: white;
+            }
+        }
+        .delete{
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 2px solid red;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+            color: white;
             &:hover{
                 background-color: red;
                 color: white;

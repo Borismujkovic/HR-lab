@@ -1,9 +1,13 @@
-import React, { Component, useState } from "react";
+import React, { Component, useContext, useState } from "react";
+import { adminCtx } from "../../context";
 import "./ChooseCandidate.scss";
 
 export const ChooseCandidate = (props) => {
+  const {theme} = useContext(adminCtx)
+
+
   return (
-    <div id="ChooseCandidate">
+    <div id={theme ? "ChooseCandidate-light" : "ChooseCandidate-dark"}>
       <main>
         <div>
           <p

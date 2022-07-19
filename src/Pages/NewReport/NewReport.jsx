@@ -11,13 +11,14 @@ import { adminCtx } from "../../context";
 export const NewReport = (props) => {
   const candidates = useContext(adminCtx).candidates;
   const [chosenCandidate, setChosenCandidate] = useState({ name: "", id: 0 });
+  const {theme} = useContext(adminCtx)
 
   const populateChosenCandidateInfo = (obj) => {
     setChosenCandidate(obj);
   };
 
   return (
-    <div id="NewReport">
+    <div id={theme ? "NewReport-light" : "NewReport-dark"}>
       <Header />
       <div className="admin-search">
         <div>
@@ -44,7 +45,7 @@ export const NewReport = (props) => {
           ))}
         </div>
 
-        <CreateNew />
+        <CreateNew chosenCandidate={chosenCandidate} />
       </main>
     </div>
   );

@@ -3,11 +3,12 @@ import './Modal.scss'
 import { adminCtx } from '../../context';
 
 export const Modal = (props) => {
-     const toggleModal = useContext(adminCtx).toggleModal
-     const modalData = useContext(adminCtx).modalData
+     const {toggleModal} = useContext(adminCtx)
+     const {modalData} = useContext(adminCtx)
+     const {theme} = useContext(adminCtx)
 
 
-    return <div id='Modal'>
+    return <div id={theme ? 'Modal-light' : 'Modal-dark'}>
     <div className='modal-content'>
                 <button className='closeBtn' onClick={() => toggleModal()}>X</button>
                 <div className='left'>
