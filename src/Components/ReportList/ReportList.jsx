@@ -30,7 +30,10 @@ export const ReportList = (props) => {
                 toggleModal();
                 selectReport(props.singleReport);
                 }}>Details</button>
-            <button className='edit'>Edit</button>
+            <button className='edit' onClick={() => {
+                props.openEditModal();
+                selectReport(props.singleReport);
+                }}>Edit</button>
             <button className='delete' onClick={() => {
                 deleteReport()
             }}>Delete</button>

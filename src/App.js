@@ -10,6 +10,7 @@ import { NewReport } from "./Pages/NewReport/NewReport";
 import { AdminProvider } from "./context";
 
 
+
 export const App = () => {
   const [theme, setTheme] = useState(window.localStorage.getItem("theme"));
   const [candidates, setCandidates] = useState([]);
@@ -57,6 +58,7 @@ export const App = () => {
   useEffect(() => {
     fetchCompanies();
     if (token) fetchData();
+    
   }, [token]);
 
   const candidateInfo = (obj) => {
@@ -96,16 +98,7 @@ export const App = () => {
       }}
     >
       <div id={theme ? "light-app" : "dark-app"}>
-        {!token && (
-          <Switch>
-            <Redirect from="/SinglePage" to="/" />
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-          </Switch>
-        )}
-
-        {token && (
+        {token ? (
           <Switch>
             <Redirect exact from="/" to="/SinglePage" />
             <Route path="/SinglePage">
@@ -114,15 +107,25 @@ export const App = () => {
             <Route path="/Admin">
               <Admin />
             </Route>
-            <Route path="/Info">
+            <Route path="/Info/:id">
               <Info />
             </Route>
             <Route path="/NewReport">
               <NewReport />
             </Route>
           </Switch>
-        )}
+          ) : (
+            <Switch>
+            <Redirect from="/SinglePage" to="/" />
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+          )
+        }
       </div>
     </AdminProvider>
   );
 };
+
+

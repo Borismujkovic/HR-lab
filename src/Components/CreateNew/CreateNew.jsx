@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './CreateNew.scss'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { adminCtx } from '../../context';
 
 export const CreateNew = (props) => {
@@ -9,6 +9,8 @@ const {fetchData} = useContext(adminCtx)
 const {admin} = useContext(adminCtx)
 const {adminId} = useContext(adminCtx)
 const {theme} = useContext(adminCtx)
+const history = useHistory()
+const [error, setError] = useState()
 
 
     const [body,setBody] = useState({
@@ -23,14 +25,24 @@ const {theme} = useContext(adminCtx)
     }
     )
 
+
+    const validateForm = () => {
+        if(body.interviewDate && body.phase && body.status && body.note){
+            postReport()
+        } else{
+            setError("Fulfill all required fields")
+        }
+    }
+
     const postReport = () => {
         fetch("http://localhost:3333/api/reports",{
             method: "POST",
-            body: JSON.stringify({...body, candidateId: props.chosenCandidate.id, candidateName: props.chosenCandidate.name} ),
+            body: JSON.stringify({...body, candidateId: props.chosenCandidate.id, candidateName: props.chosenCandidate.name}),
             headers:{"content-type": "application/json",
             "Authorization" : `Bearer ${token}`}
         })
         .then(fetchData)
+        .then(history.push("/Admin"))
     }
 
 
@@ -78,8 +90,12 @@ const {theme} = useContext(adminCtx)
                     setBody({...body, note : event.target.value})
                 }}></textarea>
             </label>
-            <Link to="/Admin">  <button onClick={postReport}>Submit</button></Link>
+              <button onClick={() => {
+                validateForm()
+                props.checkChosenCandidateInfo()
+              }}>Submit</button>
             </div>
         </div>
+        <h2 className='required'>{error}</h2>
     </div>
 }

@@ -22,6 +22,7 @@ export const ChooseCandidate = (props) => {
           >
             {props.singleCandidate.name}
           </p>
+          
         </div>
       </main>
     </div>

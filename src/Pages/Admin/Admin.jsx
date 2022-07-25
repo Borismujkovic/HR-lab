@@ -3,15 +3,21 @@ import './Admin.scss'
 import { Header } from '../../Components/Header/Header'
 import { ReportList } from '../../Components/ReportList/ReportList';
 import { Modal } from '../../Components/Modal/Modal';
+import {EditModal} from '../../Components/EditModal/EditModal'
 import { Link } from 'react-router-dom';
 import { adminCtx } from '../../context';
 
 export const Admin = () => {
-    const reports = useContext(adminCtx).reports
-    const admin = useContext(adminCtx).admin
+    const {reports} = useContext(adminCtx)
+    const {admin} = useContext(adminCtx)
     const [search, setSearch] = useState('')
-    const modalOpen = useContext(adminCtx).modalOpen
+    const {modalOpen} = useContext(adminCtx)
+    const [editModalOpen, setEditModalOpen] = useState(false)
     
+
+    const openEditModal = () => {
+        setEditModalOpen(!editModalOpen)
+    }
 
     const searchCandidate = (event) => {
         setSearch(event.target.value)
@@ -22,6 +28,7 @@ export const Admin = () => {
         )
 
     return <div id="Admin">
+    {editModalOpen && <EditModal openEditModal={openEditModal} />}
     {modalOpen && <Modal />}
     <Header />
     <div className='admin-search'>
@@ -37,7 +44,7 @@ export const Admin = () => {
     <main>
         {filteredReports.map(e => {
             if(e.companyName == admin){
-               return <ReportList singleReport={e}/>
+               return <ReportList singleReport={e} openEditModal={openEditModal}/>
             }
 })}
     

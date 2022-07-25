@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './Card.scss'
 import { adminCtx } from '../../context';
 
 export const Card = (props) => {
     const {candidateInfo} = useContext(adminCtx)
     const {theme} = useContext(adminCtx)
+    
+
     
 
     return <div id={theme ? 'Card-light' : "Card-dark"}>

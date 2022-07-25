@@ -23,7 +23,9 @@ const storageTheme = () => {
             storageTheme()
         }}>Switch Theme</button>
         <button className='logout' onClick={() => {
-            localStorage.clear()
+            localStorage.clear("admin")
+            localStorage.clear("token")
+            localStorage.clear("userId")
             setToken('')
         }} >Logout</button>
     </div>

@@ -9,6 +9,7 @@ export const Login = (props) => {
   const [user, setUser] = useState('')
   const {getUser} = useContext(adminCtx)
   const {getUserId} = useContext(adminCtx)
+  const [error, setError] = useState()
 
   const [loginData, setLoginData] = useState({
     email : "",
@@ -22,12 +23,14 @@ const authorisation = () => {
     headers : { "content-type": "application/json" }
   })
   .then((res) => res.json())
-  .then(res => {
-    if(typeof res === 'object'){
+  .then((res) => {
+    if(typeof res == 'object'){
       localStorage.setItem("token", res.accessToken);
       setToken(res.accessToken); 
     }
-    if(!user) alert("Please select company")
+    else if(typeof res == 'string'){
+      setError(res)
+    }  
   })
 }
 
@@ -43,6 +46,7 @@ const authorisation = () => {
             alt=""
           />
         </div>
+        <h2 className="error">{error}</h2>
         <div className="form">
           
           <label>UserName:</label>
