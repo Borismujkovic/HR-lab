@@ -15,7 +15,7 @@ const storageTheme = () => {
 
     return <div id='Header'>
 
-        <Link to="/SinglePage"><img className='header-img' src="https://iconape.com/wp-content/files/qa/334838/png/334838.png" alt="" /></Link>
+        <Link to="/admin/SinglePage"><img className='header-img' src="https://iconape.com/wp-content/files/qa/334838/png/334838.png" alt="" /></Link>
     
     <div className='header-btns'>
         <button className='theme' onClick={() => {
@@ -25,7 +25,7 @@ const storageTheme = () => {
         <button className='logout' onClick={() => {
             localStorage.clear("admin")
             localStorage.clear("token")
-            localStorage.clear("userId")
+            localStorage.clear("adminId")
             setToken('')
         }} >Logout</button>
     </div>

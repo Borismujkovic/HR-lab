@@ -33,8 +33,8 @@ export const Admin = () => {
     <Header />
     <div className='admin-search'>
         <div>
-            <Link to="/Admin"><button className='admin-btn'>Admin Page</button></Link>
-            <Link to="/NewReport"><button className='new-btn'>New Report</button></Link>
+            <Link to="/admin/Admin"><button className='admin-btn'>Admin Page</button></Link>
+            <Link to="/admin/NewReport"><button className='new-btn'>New Report</button></Link>
         </div>
             <div>
             <img className='search-icon' src="https://freesvg.org/storage/img/thumb/search_ideogram.png" alt="" />

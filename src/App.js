@@ -100,23 +100,23 @@ export const App = () => {
       <div id={theme ? "light-app" : "dark-app"}>
         {token ? (
           <Switch>
-            <Redirect exact from="/" to="/SinglePage" />
-            <Route path="/SinglePage">
+            <Redirect exact from="/" to="/admin/SinglePage" />
+            <Route path="/admin/SinglePage">
               <SinglePage />
             </Route>
-            <Route path="/Admin">
+            <Route path="/admin/Admin">
               <Admin />
             </Route>
-            <Route path="/Info/:id">
+            <Route path="/admin/Info/:id">
               <Info />
             </Route>
-            <Route path="/NewReport">
+            <Route path="/admin/NewReport">
               <NewReport />
             </Route>
           </Switch>
           ) : (
             <Switch>
-            <Redirect from="/SinglePage" to="/" />
+            <Redirect from="/admin" to="/" />
             <Route exact path="/">
               <HomePage />
             </Route>

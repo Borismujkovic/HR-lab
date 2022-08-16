@@ -9,10 +9,11 @@ export const EditModal = (props) => {
      const {token} = useContext(adminCtx)
      const {fetchData} = useContext(adminCtx)
      const history = useHistory()
+     console.log(modalData.id);
      
      const [body, setBody] = useState({
-        candidateId: "",
-        candidateName: "",
+        candidateId: modalData.candidateId,
+        candidateName: modalData.candidateName,
         companyId: modalData.companyId,
         companyName: modalData.companyName,
         interviewDate:"",
@@ -25,12 +26,12 @@ export const EditModal = (props) => {
     const changeReport = () => {
         fetch(`http://localhost:3333/api/reports/${modalData.id}}`, {
             method : "PUT",
-            body : JSON.stringify({...body, candidateId: modalData.candidateId, candidateName: modalData.candidateName}),
+            body : JSON.stringify({...body}),
             headers : {"content-type": "application/json",
             "Authorization" : `Bearer ${token}`}
         })
         .then(fetchData)
-        .then(history.push("/Admin"))
+        .then(history.push("/admin/Admin"))
     }
     
 
@@ -61,7 +62,7 @@ export const EditModal = (props) => {
                             <select  name="Status" className='status' onChange={(event) => {
                     setBody({...body, status : event.target.value})
                 }}>
-                    <option disabled selected value>{modalData.status}</option>
+                    <option disabled selected value>---</option>
                     <option value="Ongoing">Ongoing</option>
                     <option value="Passed">Passed</option>
                     <option value="Declined">Declined</option>
@@ -72,7 +73,7 @@ export const EditModal = (props) => {
                             <select name="Phase" className='phase' onChange={(event) => {
                     setBody({...body, phase : event.target.value})
                 }}>
-                   <option disabled selected value>{modalData.phase}</option>
+                   <option disabled selected value>---</option>
                    <option value="Final">CV</option>
                     <option value="HR">HR</option>
                     <option value="Technical">Technical</option>

@@ -14,7 +14,7 @@ export const ReportList = (props) => {
         fetch(`http://localhost:3333/api/reports/${props.singleReport.id}`, {
             method : "DELETE",
             headers : {
-                "Content-Type": "application/json",
+            "Content-Type": "application/json",
             "Authorization" : `Bearer ${token}`
             }
         })

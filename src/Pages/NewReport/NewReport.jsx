@@ -29,10 +29,10 @@ export const NewReport = (props) => {
       <Header />
       <div className="admin-search">
         <div>
-          <Link to="/Admin">
+          <Link to="/admin/Admin">
             <button className="admin-btn">Admin Page</button>
           </Link>
-          <Link to="/NewReport">
+          <Link to="admin//NewReport">
             <button className="new-btn">New Report</button>
           </Link>
         </div>

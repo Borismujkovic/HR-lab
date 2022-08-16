@@ -10,6 +10,7 @@ export const Login = (props) => {
   const {getUser} = useContext(adminCtx)
   const {getUserId} = useContext(adminCtx)
   const [error, setError] = useState()
+  const [userError, setUserError] = useState('')
 
   const [loginData, setLoginData] = useState({
     email : "",
@@ -34,6 +35,14 @@ const authorisation = () => {
   })
 }
 
+const selectCompany = () => {
+  if(user === "" || user === "blank"){
+    setUserError("Please select company")
+  } else{
+    authorisation()
+  }
+}
+
 
 
 
@@ -46,7 +55,8 @@ const authorisation = () => {
             alt=""
           />
         </div>
-        <h2 className="error">{error}</h2>
+        <h2 className="error">{user === "blank" ?  userError : error}</h2>
+        
         <div className="form">
           
           <label>UserName:</label>
@@ -71,7 +81,7 @@ const authorisation = () => {
           </select>
           <button onClick={() => {
             fetchData()
-            authorisation()
+            selectCompany()
             getUser(user)
             getUserId()
             }}>LogIn</button>

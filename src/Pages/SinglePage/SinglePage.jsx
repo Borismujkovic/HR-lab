@@ -24,7 +24,7 @@ export const SinglePage = (props) => {
     <Header toggleTheme={props.toggleTheme}/>
     <main className="main-card">
     <div className='div-search'>
-            <Link to="/Admin"><button>Your Reports</button></Link>
+            <Link to="/admin/Admin"><button>Your Reports</button></Link>
             <div>
             <img className='search-icon' src="https://freesvg.org/storage/img/thumb/search_ideogram.png" alt="" />
             <input type="search" onChange={search}/>

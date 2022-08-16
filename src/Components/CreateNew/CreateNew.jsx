@@ -27,7 +27,7 @@ const [error, setError] = useState()
 
 
     const validateForm = () => {
-        if(body.interviewDate && body.phase && body.status && body.note){
+        if( props.chosenCandidate.id && props.chosenCandidate.name && body.interviewDate && body.phase && body.status && body.note){
             postReport()
         } else{
             setError("Fulfill all required fields")
@@ -42,7 +42,7 @@ const [error, setError] = useState()
             "Authorization" : `Bearer ${token}`}
         })
         .then(fetchData)
-        .then(history.push("/Admin"))
+        .then(history.push("/admin/Admin"))
     }
 
 
