@@ -9,8 +9,6 @@ import { Info } from "./Pages/Info/Info";
 import { NewReport } from "./Pages/NewReport/NewReport";
 import { AdminProvider } from "./context";
 
-
-
 export const App = () => {
   const [theme, setTheme] = useState(window.localStorage.getItem("theme"));
   const [candidates, setCandidates] = useState([]);
@@ -18,7 +16,9 @@ export const App = () => {
   const [companies, setCompanies] = useState([]);
   const [singleCandidate, setSingleCandidate] = useState(null);
   const [admin, setAdmin] = useState(window.localStorage.getItem("admin"));
-  const [adminId, setAdminId] = useState(window.localStorage.getItem("adminId"));
+  const [adminId, setAdminId] = useState(
+    window.localStorage.getItem("adminId")
+  );
   const [modalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState(null);
   const [token, setToken] = useState(window.localStorage.getItem("token"));
@@ -58,7 +58,6 @@ export const App = () => {
   useEffect(() => {
     fetchCompanies();
     if (token) fetchData();
-    
   }, [token]);
 
   const candidateInfo = (obj) => {
@@ -114,18 +113,15 @@ export const App = () => {
               <NewReport />
             </Route>
           </Switch>
-          ) : (
-            <Switch>
+        ) : (
+          <Switch>
             <Redirect from="/admin" to="/" />
             <Route exact path="/">
               <HomePage />
             </Route>
           </Switch>
-          )
-        }
+        )}
       </div>
     </AdminProvider>
   );
 };
-
-

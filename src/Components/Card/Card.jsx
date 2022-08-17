@@ -1,21 +1,26 @@
-import React, { useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import './Card.scss'
-import { adminCtx } from '../../context';
+import React, { useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import "./Card.scss";
+import { adminCtx } from "../../context";
 
 export const Card = (props) => {
-    const {candidateInfo} = useContext(adminCtx)
-    const {theme} = useContext(adminCtx)
-    
+  const { candidateInfo } = useContext(adminCtx);
+  const { theme } = useContext(adminCtx);
 
-    
-
-    return <div id={theme ? 'Card-light' : "Card-dark"}>
-        <Link to={`/admin/Info/${props.singleCandidate.id}`} className="info-link">
-        <div className='card-wrap' onClick={() => candidateInfo(props.singleCandidate)}>
-        <img  src={props.singleCandidate.images} alt="" />
-        <h2>{props.singleCandidate.name}</h2>
+  return (
+    <div id={theme ? "Card-light" : "Card-dark"}>
+      <Link
+        to={`/admin/Info/${props.singleCandidate.id}`}
+        className="info-link"
+      >
+        <div
+          className="card-wrap"
+          onClick={() => candidateInfo(props.singleCandidate)}
+        >
+          <img src={props.singleCandidate.images} alt="" />
+          <h2>{props.singleCandidate.name}</h2>
         </div>
-        </Link>
+      </Link>
     </div>
-}
+  );
+};

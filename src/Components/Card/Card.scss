@@ -1,85 +1,81 @@
-#Card-light{
+#Card-light {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  > .info-link {
+    text-decoration: none;
+  }
+  .card-wrap {
+    border: 2px solid orange;
+    border-radius: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    
-    > .info-link{
-        text-decoration: none;
-        
-        
+    width: 300px;
+    height: 400px;
+    background-image: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 2s;
+      background-color: rgba(0, 0, 0, 0.555);
     }
-    .card-wrap{
-        border: 2px solid orange;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 300px;
-        height: 400px;
-        background-image: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 10px;
-        &:hover {
-            transform: scale(1.1);
-            transition-duration: 2s;
-            background-color: rgba(0, 0, 0, 0.555);
-          }
-        
-        padding: 30px 0;
-         img{
-            height: 200px;
-            border-radius: 100%;
-        }
-        h2{
-            border-top: 2px solid black;
-            padding-top: 20px;
-            color: black;
-        }
+
+    padding: 30px 0;
+    img {
+      height: 200px;
+      border-radius: 100%;
     }
+    h2 {
+      border-top: 2px solid black;
+      padding-top: 20px;
+      color: black;
+    }
+  }
 }
 
-#Card-dark{
+#Card-dark {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  > .info-link {
+    text-decoration: none;
+  }
+  .card-wrap {
+    border: 2px solid orange;
+    border-radius: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    
-    > .info-link{
-        text-decoration: none;
-        
-        
+    width: 300px;
+    height: 400px;
+    background-image: url(https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 2s;
+      background-color: rgba(0, 0, 0, 0.555);
     }
-    .card-wrap{
-        border: 2px solid orange;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 300px;
-        height: 400px;
-        background-image: url(https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80);
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 10px;
-        &:hover {
-            transform: scale(1.1);
-            transition-duration: 2s;
-            background-color: rgba(0, 0, 0, 0.555);
-          }
-        
-        padding: 30px 0;
-         img{
-            height: 200px;
-            border-radius: 100%;
-        }
-        h2{
-            border-top: 2px solid black;
-            padding-top: 20px;
-            color: black;
-        }
+
+    padding: 30px 0;
+    img {
+      height: 200px;
+      border-radius: 100%;
     }
+    h2 {
+      border-top: 2px solid black;
+      padding-top: 20px;
+      color: black;
+    }
+  }
 }

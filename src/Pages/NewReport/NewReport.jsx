@@ -11,7 +11,7 @@ import { adminCtx } from "../../context";
 export const NewReport = (props) => {
   const candidates = useContext(adminCtx).candidates;
   const [chosenCandidate, setChosenCandidate] = useState({ name: "", id: 0 });
-  const {theme} = useContext(adminCtx)
+  const { theme } = useContext(adminCtx);
   const [error, setError] = useState();
 
   const populateChosenCandidateInfo = (obj) => {
@@ -19,10 +19,10 @@ export const NewReport = (props) => {
   };
 
   const checkChosenCandidateInfo = () => {
-    if(!chosenCandidate.name && !chosenCandidate.id){
-      setError("Please choose candidate")
+    if (!chosenCandidate.name && !chosenCandidate.id) {
+      setError("Please choose candidate");
     }
-  }
+  };
 
   return (
     <div id={theme ? "NewReport-light" : "NewReport-dark"}>
@@ -53,7 +53,10 @@ export const NewReport = (props) => {
           ))}
           <h2 className="chooseError">{error}</h2>
         </div>
-        <CreateNew chosenCandidate={chosenCandidate} checkChosenCandidateInfo={checkChosenCandidateInfo}/>
+        <CreateNew
+          chosenCandidate={chosenCandidate}
+          checkChosenCandidateInfo={checkChosenCandidateInfo}
+        />
       </main>
     </div>
   );

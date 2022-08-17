@@ -1,231 +1,227 @@
-#Modal-light{
-    background-color: rgba(77, 75, 75, 0.658);
-    height: 100vh;
-    width: 100%;
+#Modal-light {
+  background-color: rgba(77, 75, 75, 0.658);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  .modal-content {
+    background-color: white;
+    min-height: 600px;
+    min-width: 900px;
+    max-width: 900px;
+    padding: 30px 10px;
+    position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    z-index: 2;
-    .modal-content{
-        background-color: white;
-        min-height: 600px;
-        min-width: 900px;
-        max-width: 900px;
-        padding: 30px 10px;
-        position: relative;
-        display: flex;
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
 
-        .closeBtn{
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-color: black;
-            color: white;
-            padding: 10px;
-            font-size: 15px;
-            font-weight: 400;
-            cursor: pointer;
-            border: none;
-        }
-        .left{
-            background-color: rgb(245 130 31);
-            min-height: 600px;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .userLogo{
-                width: 200px;
-                margin-bottom: 30px;
-            }
-            .personalInfo{
-                color: white;
-            }
-        }
-        .right{
-            width: 60%;
-            min-height: 600px;
-            color: gray;
-            .reportInfo{
-                border-bottom: 2px solid rgb(245 130 31);
-                padding: 20px 0;
-                display: flex;
-                margin-top: 30px;
-                .date{
-                    padding: 5px;
-                    border: none;
-                    cursor: pointer;
-                }
-                .status{
-                    padding: 5px;
-                    border: none;
-                }
-                .phase{
-                    padding: 5px;
-                    border: none;
-                }
-                h4{
-                    font-weight: 400;
-                }
-                .logo{
-                    width: 70px;
-                    padding: 15px;
-                }
-                .reportInfoItem{
-                   width: 50%;
-                   display: flex;
-                   flex-direction: column;
-                   justify-content: center;
-                   align-items: center;
-                }
-            }
-            .report{
-
-                .reportNote{
-                    width: 90%;
-                    padding: 15px;
-                    height: 250px;
-                    border: 2px solid;
-                    border-radius: 20px;
-                    font-size: 18px;
-                }
-                .submitChange{
-                    padding: 10px 15px;
-                    border: none;
-                    background-color: rgb(245 130 31);
-                    border-radius: 20px;
-                    color: white;
-                    margin-top: 10px;
-                    cursor: pointer;
-                }
-            }
-                
-        }
+    .closeBtn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      cursor: pointer;
+      border: none;
     }
-
+    .left {
+      background-color: rgb(245 130 31);
+      min-height: 600px;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .userLogo {
+        width: 200px;
+        margin-bottom: 30px;
+      }
+      .personalInfo {
+        color: white;
+      }
+    }
+    .right {
+      width: 60%;
+      min-height: 600px;
+      color: gray;
+      .reportInfo {
+        border-bottom: 2px solid rgb(245 130 31);
+        padding: 20px 0;
+        display: flex;
+        margin-top: 30px;
+        .date {
+          padding: 5px;
+          border: none;
+          cursor: pointer;
+        }
+        .status {
+          padding: 5px;
+          border: none;
+        }
+        .phase {
+          padding: 5px;
+          border: none;
+        }
+        h4 {
+          font-weight: 400;
+        }
+        .logo {
+          width: 70px;
+          padding: 15px;
+        }
+        .reportInfoItem {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .report {
+        .reportNote {
+          width: 90%;
+          padding: 15px;
+          height: 250px;
+          border: 2px solid;
+          border-radius: 20px;
+          font-size: 18px;
+        }
+        .submitChange {
+          padding: 10px 15px;
+          border: none;
+          background-color: rgb(245 130 31);
+          border-radius: 20px;
+          color: white;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
-#Modal-dark{
-    background-color: rgba(77, 75, 75, 0.658);
-    height: 100vh;
-    width: 100%;
+#Modal-dark {
+  background-color: rgba(77, 75, 75, 0.658);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  .modal-content {
+    background-color: white;
+    min-height: 600px;
+    min-width: 900px;
+    max-width: 900px;
+    padding: 30px 10px;
+    position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    z-index: 2;
-    .modal-content{
-        background-color: white;
-        min-height: 600px;
-        min-width: 900px;
-        max-width: 900px;
-        padding: 30px 10px;
-        position: relative;
-        display: flex;
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
 
-        .closeBtn{
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-color: black;
-            color: white;
-            padding: 10px;
-            font-size: 15px;
-            font-weight: 400;
-            cursor: pointer;
-            border: none;
-        }
-        .left{
-            background-color: rgb(245 130 31);
-            min-height: 600px;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .userLogo{
-                width: 200px;
-                margin-bottom: 30px;
-            }
-            .personalInfo{
-                color: white;
-            }
-        }
-        .right{
-            width: 60%;
-            min-height: 600px;
-            color: white;
-            background-color: rgb(94, 91, 91);
-            .reportInfo{
-                border-bottom: 2px solid rgb(245 130 31);
-                padding: 20px 0;
-                display: flex;
-                margin-top: 30px;
-                color: rgb(245 130 31);
-                .date{
-                    padding: 5px;
-                    border: none;
-                    cursor: pointer;
-                    background-color: transparent;
-                    color: rgb(245 130 31);
-                }
-                .status{
-                    padding: 5px;
-                    border: none;
-                    background-color: transparent;
-                    color: rgb(245 130 31);
-                }
-                .phase{
-                    padding: 5px;
-                    border: none;
-                    background-color: transparent;
-                    color: rgb(245 130 31);
-                }
-                h4{
-                    font-weight: 400;
-                }
-                .logo{
-                    width: 70px;
-                    padding: 15px;
-                }
-                .reportInfoItem{
-                   width: 50%;
-                   display: flex;
-                   flex-direction: column;
-                   justify-content: center;
-                   align-items: center;
-                }
-            }
-            .report{
-                font-size: 18px;
-                padding: 40px;
-                .reportNote{
-                    width: 90%;
-                    padding: 15px;
-                    height: 250px;
-                    border: 2px solid;
-                    border-radius: 20px;
-                    background-color: transparent;
-                    color: white;
-                    font-size: 18px;
-                }
-                .submitChange{
-                    padding: 10px 15px;
-                    border: none;
-                    background-color: rgb(245 130 31);
-                    border-radius: 20px;
-                    color: white;
-                    margin-top: 10px;
-                    cursor: pointer;
-                }
-            }
-        }
+    .closeBtn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      cursor: pointer;
+      border: none;
     }
-
+    .left {
+      background-color: rgb(245 130 31);
+      min-height: 600px;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .userLogo {
+        width: 200px;
+        margin-bottom: 30px;
+      }
+      .personalInfo {
+        color: white;
+      }
+    }
+    .right {
+      width: 60%;
+      min-height: 600px;
+      color: white;
+      background-color: rgb(94, 91, 91);
+      .reportInfo {
+        border-bottom: 2px solid rgb(245 130 31);
+        padding: 20px 0;
+        display: flex;
+        margin-top: 30px;
+        color: rgb(245 130 31);
+        .date {
+          padding: 5px;
+          border: none;
+          cursor: pointer;
+          background-color: transparent;
+          color: rgb(245 130 31);
+        }
+        .status {
+          padding: 5px;
+          border: none;
+          background-color: transparent;
+          color: rgb(245 130 31);
+        }
+        .phase {
+          padding: 5px;
+          border: none;
+          background-color: transparent;
+          color: rgb(245 130 31);
+        }
+        h4 {
+          font-weight: 400;
+        }
+        .logo {
+          width: 70px;
+          padding: 15px;
+        }
+        .reportInfoItem {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .report {
+        font-size: 18px;
+        padding: 40px;
+        .reportNote {
+          width: 90%;
+          padding: 15px;
+          height: 250px;
+          border: 2px solid;
+          border-radius: 20px;
+          background-color: transparent;
+          color: white;
+          font-size: 18px;
+        }
+        .submitChange {
+          padding: 10px 15px;
+          border: none;
+          background-color: rgb(245 130 31);
+          border-radius: 20px;
+          color: white;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

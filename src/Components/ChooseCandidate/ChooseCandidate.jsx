@@ -3,8 +3,7 @@ import { adminCtx } from "../../context";
 import "./ChooseCandidate.scss";
 
 export const ChooseCandidate = (props) => {
-  const {theme} = useContext(adminCtx)
-
+  const { theme } = useContext(adminCtx);
 
   return (
     <div id={theme ? "ChooseCandidate-light" : "ChooseCandidate-dark"}>
@@ -22,7 +21,6 @@ export const ChooseCandidate = (props) => {
           >
             {props.singleCandidate.name}
           </p>
-          
         </div>
       </main>
     </div>

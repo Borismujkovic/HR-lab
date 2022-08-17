@@ -1,47 +1,47 @@
-#ReportListInfo-light{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    
-    img{
-        height: 52px;
-        cursor: pointer;
-    }
-    h3{
-        width: 400px;
-        padding: 15px;
-        border: 3px solid black;
-        margin: 7px;
-        color: black;
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
-    .img-modal{
-        background-color: rgba(245, 131, 31, 0.74);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
+#ReportListInfo-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    height: 52px;
+    cursor: pointer;
+  }
+  h3 {
+    width: 400px;
+    padding: 15px;
+    border: 3px solid black;
+    margin: 7px;
+    color: black;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  .img-modal {
+    background-color: rgba(245, 131, 31, 0.74);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
 }
 
-#ReportListInfo-dark{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    
-    img{
-        height: 52px;
-        cursor: pointer;
-    }
-    h3{
-        width: 400px;
-        padding: 15px;
-        border: 3px solid white;
-        margin: 7px;
-        color: white;
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
-    .img-modal{
-        background-color: white;
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    }
+#ReportListInfo-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    height: 52px;
+    cursor: pointer;
+  }
+  h3 {
+    width: 400px;
+    padding: 15px;
+    border: 3px solid white;
+    margin: 7px;
+    color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  .img-modal {
+    background-color: white;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
 }

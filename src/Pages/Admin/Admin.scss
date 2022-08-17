@@ -1,11 +1,11 @@
 $logo-color: rgb(245, 130, 31);
 
-#Admin{
+#Admin {
   min-height: 100vh;
-    .admin-search {
-        display: flex;
-        justify-content: space-between;
-        padding: 30px 100px;
+  .admin-search {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
     .admin-btn {
       padding: 10px 40px;
       background-color: $logo-color;
@@ -20,10 +20,9 @@ $logo-color: rgb(245, 130, 31);
         background-color: transparent;
         color: $logo-color;
       }
-      
     }
-    .new-btn{
-        padding: 10px 40px;
+    .new-btn {
+      padding: 10px 40px;
       background-color: white;
       border: 2px solid $logo-color;
       border-top-right-radius: 20px;
@@ -54,10 +53,10 @@ $logo-color: rgb(245, 130, 31);
       }
     }
   }
-  main{
+  main {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px auto;
   }
-    }
+}

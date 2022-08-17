@@ -12,7 +12,6 @@ $logo-color: rgb(245, 130, 31);
     justify-content: center;
     align-items: center;
     > .not-active {
-      // border: 4px solid black;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,7 +36,6 @@ $logo-color: rgb(245, 130, 31);
       .not-active {
         margin: 15px;
         border: 3px solid;
-        // border: 3px solid white;
         padding: 10px 20px;
         color: black;
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -74,7 +72,6 @@ $logo-color: rgb(245, 130, 31);
     justify-content: center;
     align-items: center;
     > .not-active {
-      // border: 4px solid black;
       display: flex;
       justify-content: center;
       align-items: center;
