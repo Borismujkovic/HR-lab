@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./EditModal.scss";
 import { adminCtx } from "../../context";
 import { useHistory } from "react-router-dom";
@@ -9,9 +9,13 @@ export const EditModal = (props) => {
   const { token } = useContext(adminCtx);
   const { fetchData } = useContext(adminCtx);
   const history = useHistory();
-  console.log(modalData.id);
+  
 
-  const [body, setBody] = useState({
+  const [body, setBody] = useState(null);
+
+  useEffect(() => {
+    if(modalData){
+      setBody({
     candidateId: modalData.candidateId,
     candidateName: modalData.candidateName,
     companyId: modalData.companyId,
@@ -20,12 +24,15 @@ export const EditModal = (props) => {
     phase: "",
     status: "",
     note: "",
-  });
+    });
+  }
+  }, [modalData])
 
   const changeReport = () => {
-    fetch(`http://localhost:3333/api/reports/${modalData.id}}`, {
+    fetch(`http://localhost:3333/api/reports/${modalData.id}`, {
       method: "PUT",
-      body: JSON.stringify({ ...body }),
+      body: JSON.stringify({ ...body
+      }),
       headers: {
         "content-type": "application/json",
         Authorization: `Bearer ${token}`,

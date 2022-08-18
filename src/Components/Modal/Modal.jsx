@@ -6,6 +6,7 @@ export const Modal = (props) => {
   const { toggleModal } = useContext(adminCtx);
   const { modalData } = useContext(adminCtx);
   const { theme } = useContext(adminCtx);
+ 
 
   return (
     <div id={theme ? "Modal-light" : "Modal-dark"}>

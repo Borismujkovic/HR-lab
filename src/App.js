@@ -35,6 +35,8 @@ export const App = () => {
     setModalOpen(!modalOpen);
   };
 
+
+
   const fetchData = () => {
     if (token) {
       fetch("http://localhost:3333/api/candidates")
